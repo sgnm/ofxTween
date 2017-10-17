@@ -73,8 +73,8 @@ class ofxTween{
 		bool completed;
 
 
-		ofxTweenDelegate * easingFunction;
-		ofxEasing * easing;
+		ofxTweenDelegate * easingFunction = nullptr;
+		ofxEasing * easing = nullptr;
 		ofxEasingType type;
 
 		bool frameBased;

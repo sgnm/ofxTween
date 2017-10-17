@@ -3,10 +3,8 @@
 ofxTween::ofxTween(){
 	duration = 0;
 	completed = true;
-	easingFunction = NULL;
 	running = false;
-
-	easing = NULL;
+    
 	id = -1;
 	frameBased = false;
 }
@@ -31,13 +29,13 @@ frameBased(other.frameBased) {
         easingFunction = new ofxTweenDelegate(*other.easingFunction);
     }
     else {
-        easingFunction = NULL;
+        easingFunction = nullptr;
     }
     if (other.easing) {
         easing = other.easing;
     }
     else {
-        easing = NULL;
+        easing = nullptr;
     }
 }
 
@@ -62,13 +60,13 @@ ofxTween ofxTween::operator=(const ofxTween &other)
         easingFunction = new ofxTweenDelegate(*other.easingFunction);
     }
     else {
-        easingFunction = NULL;
+        easingFunction = nullptr;
     }
     if (other.easing) {
         easing = other.easing;
     }
     else {
-        easing = NULL;
+        easing = nullptr;
     }
     return *this;
 }
